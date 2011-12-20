@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- Positon Show On Map PageView -->
+		<LinearLayout android:id="@+id/home_view" 
+		    android:gravity="center_horizontal"
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:background="@drawable/background"
+		    android:layout_weight="1">
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginLeft="5dp"	
+	            android:layout_marginRight="5dp"
+	            android:layout_marginBottom="5dp"	            
+	            android:background="@drawable/map_out_frame"
+	            android:layout_weight="1">
+	            <!-- Google Map -->
+	            <com.google.android.maps.MapView
+	             android:id="@+id/mapView"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:clickable="true"
+                 android:layout_margin="15dp"
+                 android:apiKey="0BVqlW9wX_yDqhCEvvj0MkQW4muVVKiZDiBHHrQ"
+                 />	        
+		    </LinearLayout>
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+	            android:layout_marginBottom="5dp"
+	            android:background="@drawable/decorate_blind_bar"
+	            android:layout_weight="6">
+	            <ImageView
+	            android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="6"
+		        android:background="@drawable/picture_test"/>
+	            <TextView 
+	            android:gravity="center"
+	            android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="6"
+		        android:text="旅遊地點"/>
+	            <TextView
+	            android:gravity="center" 
+	            android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="6"
+		        android:text="陽明山"/>
+	            <Button
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:background="@drawable/button_last_page"
+		        android:layout_margin="10dp"
+		        android:layout_weight="5"
+		        />	        
+		    </LinearLayout>
+		        
+		</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <!-- Set All Content View in This LinearLayout -->
+	<LinearLayout android:orientation="vertical" 
+       	android:layout_width="fill_parent" 
+       	android:layout_height="fill_parent"       
+       >
+       
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/title_bar"
+	        android:layout_weight="4"
+	        >	    
+	    </LinearLayout>
+	    
+	    <RelativeLayout android:id="@+id/add_content_view"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        >
+				    
+		<!-- show position page -->	        
+	    <LinearLayout android:id="@+id/position_map_view" 
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@drawable/background"
+	    >
+	  
+	    
+		   <LinearLayout 
+		   android:layout_width="fill_parent"
+		   android:layout_height="fill_parent"
+	       android:layout_marginTop="10dp"
+	       android:layout_marginLeft="5dp"	
+	       android:layout_marginRight="5dp"
+           android:layout_marginBottom="5dp"	            
+           android:background="@drawable/map_out_frame"
+           android:layout_weight="1">
+	            
+		           <!-- Google Map -->
+		           <com.google.android.maps.MapView
+		           android:id="@+id/mapview"
+		           android:layout_width="fill_parent"
+		           android:layout_height="fill_parent"
+		           android:clickable="true"
+		           android:layout_margin="15dp"
+		           android:apiKey="0BVqlW9wX_yAWijJN-8aLIVatEd_MWvFPFmcffw"
+		           />	         
+		   </LinearLayout>
+		   
+	       <LinearLayout
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/decorate_blind_bar"
+            android:layout_weight="6">
+		            <ImageView
+		            android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="6"
+			        android:background="@drawable/picture_test"/>
+		            <TextView 
+		            android:gravity="center"
+		            android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="6"
+			        android:text="旅遊地點"/>
+		            <TextView
+		            android:gravity="center" 
+		            android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="6"
+			        android:text="陽明山"/>
+		            <Button
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:background="@drawable/button_last_page"
+			        android:layout_margin="10dp"
+			        android:layout_weight="5"
+			        />	        
+			</LinearLayout>
+        </LinearLayout>
+					
+					
+					    
+
+		</RelativeLayout>    
+		    
+        <!-- Button Manu Bar (Always Exist) -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="4"
+		    android:background="@drawable/manu_bar" >
+		    <Button android:id="@+id/homeButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/add"
+		        />
+		    <Button android:id="@+id/searchButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/search"
+		        />
+		    <Button android:id="@+id/infoButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/info"
+		        />
+		</LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

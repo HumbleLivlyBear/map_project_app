@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    
+    <!-- Login View -->
+	<LinearLayout android:id="@+id/enter_view" 
+       	android:orientation="vertical" 
+       	android:layout_width="fill_parent" 
+       	android:layout_height="fill_parent"
+       	android:background="@drawable/enter_view"
+       	>
+       	<Button android:id="@+id/enterButton" 
+       		android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"  
+			android:background="#00FFFFFF"/>
+    </LinearLayout>
+    
+    
+    <!-- Set All Content View in This LinearLayout -->
+	<LinearLayout android:orientation="vertical" 
+       	android:layout_width="fill_parent" 
+       	android:layout_height="fill_parent"       
+       >
+       
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@drawable/title_bar"
+	        android:layout_weight="4"
+	        >	    
+	    </LinearLayout>
+	    
+	    <RelativeLayout android:id="@+id/add_content_view"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        >
+				    <!-- Add(Home) Page-->
+					<LinearLayout android:id="@+id/home_view" 
+					    android:gravity="center_horizontal"
+					    android:orientation="vertical"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/background"
+					    >
+					    <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+				            android:layout_marginTop="10dp"
+				            android:layout_marginLeft="5dp"	
+				            android:layout_marginRight="5dp"
+				            android:layout_marginBottom="5dp"	            
+				            android:background="@drawable/map_out_frame"
+				            android:layout_weight="1">
+				            <!-- Google Map -->
+				            <com.google.android.maps.MapView
+				             android:id="@+id/mapView"
+			                 android:layout_width="fill_parent"
+			                 android:layout_height="fill_parent"
+			                 android:clickable="true"
+			                 android:layout_margin="15dp"
+			                 android:apiKey="0BVqlW9wX_yAWijJN-8aLIVatEd_MWvFPFmcffw"
+			                 />	        
+					    </LinearLayout>
+					    <LinearLayout
+					        android:gravity="right"
+					        android:orientation="horizontal"
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+				            android:layout_marginBottom="5dp"
+				            android:background="@drawable/decorate_bar"
+				            android:layout_weight="6">
+				            <Button android:id="@+id/addButton"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/button_record"
+					        android:layout_margin="10dp"
+					        />	        
+					    </LinearLayout>
+					        
+					</LinearLayout>
+			        
+					<!-- Search PageView -->
+					<LinearLayout android:id="@+id/search_view" 
+					    android:gravity="center_horizontal"
+					    android:orientation="vertical"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/background_search"
+					    >
+					    <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+					        android:layout_weight="6"
+					        android:background="@drawable/menu_search_bar">
+				            <LinearLayout
+				                android:orientation="horizontal"
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_marginTop="5dp"
+					            android:layout_marginBottom="5dp"
+					            android:layout_marginLeft="15dp"
+					            android:layout_marginRight="15dp"
+					            android:background="@drawable/search_bar">
+					         <EditText android:id="@+id/edit_search"
+					                android:layout_width="fill_parent"
+					                android:layout_height="fill_parent"
+					                android:layout_marginLeft="50dp"
+					                android:layout_marginRight="5dp"
+					                android:layout_marginTop="8dp"
+					                android:layout_marginBottom="1dp"/>	                 
+				            </LinearLayout>		        
+					    </LinearLayout>
+					    <ListView android:id="@+id/search_list"
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+					        android:layout_weight="1"		        
+					        />		        
+					</LinearLayout>  
+					
+					<!-- Info PageView -->
+				    <LinearLayout android:id="@+id/info_view" 
+						    android:gravity="center_horizontal"
+						    android:orientation="vertical"
+						    android:layout_width="fill_parent"
+						    android:layout_height="fill_parent"
+						    android:background="@drawable/background_info"
+						    >
+						<LinearLayout 
+						    android:layout_width="fill_parent"
+						    android:layout_height="fill_parent"
+						    android:background="@drawable/deco_info_bar"
+						    android:layout_marginTop="5dp"
+						    android:layout_weight="6">		    
+						</LinearLayout>
+						<ListView android:id="@+id/info_list"
+						    android:layout_width="fill_parent"
+						    android:layout_height="fill_parent"
+						    android:layout_weight="1"/> 
+				    </LinearLayout>
+					
+				    <!-- DataView ViewPage -->
+					<LinearLayout android:id="@+id/add_data_view" 
+					    android:gravity="center_horizontal"
+					    android:orientation="vertical"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/background">
+						<LinearLayout 
+					        android:orientation="vertical"
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+				            android:layout_marginTop="10dp"
+				            android:layout_marginLeft="5dp"	
+				            android:layout_marginRight="5dp"
+				            android:layout_marginBottom="5dp"	            
+				            android:background="@drawable/white_content"
+				            android:layout_weight="1">
+				            <LinearLayout
+				                android:orientation="horizontal"
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_margin="10dp"
+					            android:layout_weight="1">
+				                <ImageView 
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="1"
+					            android:background="@drawable/map_test"
+					            android:layout_margin="5dp"/>
+				                <Button
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_marginTop="50dp"
+					            android:layout_weight="2"
+					            android:background="@drawable/add_picture"/>
+				            </LinearLayout>
+				            <LinearLayout
+				                android:orientation="horizontal"
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_margin="10dp"
+					            android:layout_weight="2">
+				                <TextView
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent" 
+				                android:text="名稱"
+				                android:layout_marginTop="10dp"
+				                android:layout_marginLeft="15dp"
+				                android:layout_weight="4"/>
+				                <EditText android:id="@+id/edit_add_data"
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="1"
+					            android:layout_margin="10dp"
+					            /> 
+				            </LinearLayout>	
+				            <LinearLayout
+				                android:orientation="horizontal"
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_margin="10dp"
+					            android:layout_weight="2">
+				                <TextView
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent" 
+				                android:text="類別"
+				                android:layout_marginTop="10dp"
+				                android:layout_marginLeft="10dp"
+				                android:layout_weight="4"/>
+				                <Spinner
+				                android:layout_width="fill_parent"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="1"
+					            android:layout_margin="10dp"
+					            />
+				            </LinearLayout>		        
+				           
+					    </LinearLayout>
+					    <LinearLayout
+					        android:gravity="right"
+					        android:orientation="horizontal"
+					        android:layout_width="fill_parent"
+					        android:layout_height="fill_parent"
+				            android:layout_marginBottom="5dp"
+				            android:background="@drawable/decorate_bar"
+				            android:layout_weight="6">
+				            <Button
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/button_cancle"
+					        android:layout_margin="10dp"
+					        />
+				            <Button
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/button_confirm"
+					        android:layout_marginTop="10dp"
+					        android:layout_marginBottom="10dp"
+					        android:layout_marginRight="10dp"
+					        />	        
+					    </LinearLayout>
+					</LinearLayout>
+			        
+
+		</RelativeLayout>    
+		    
+        <!-- Button Manu Bar (Always Exist) -->
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="4"
+		    android:background="@drawable/manu_bar" >
+		    <Button android:id="@+id/homeButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/add"
+		        />
+		    <Button android:id="@+id/searchButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/search"
+		        />
+		    <Button android:id="@+id/infoButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_margin="20dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/info"
+		        />
+		</LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
